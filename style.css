@@ -12,6 +12,10 @@ body {
     margin: 0px auto;
 }
 
+img {
+    width: 100%;
+}
+
 nav a {
     color: rgb(86, 86, 86);
     text-decoration: none;
@@ -33,7 +37,7 @@ ul {
     text-transform: uppercase;
     font-size: 40px;
     margin-top: 80px;
-    margin-bottom: 70px;
+    margin-bottom: 10px;
 }
 
 .homebg {
@@ -47,6 +51,20 @@ ul {
 .aboutbg {
     background-color: #F4C20D;
 }
+
+
+.homeimage {
+    max-width: 100%;
+}
+
+
+footer {
+    color:rgb(86, 86, 86);
+    border-top: 1px solid rgb(86, 86, 86);
+    text-align: center;
+    padding: 5px 0px;
+}
+
 
 /*JAVASCRIPT STARTS*/
 
@@ -87,9 +105,14 @@ ul {
 
 
 
-/*JAVASCRIPT STARTS on mobile media*/
-/* Show hamburger on mobile */
+
 @media (max-width: 768px) {
+    .logo{
+        font-size: 30px;
+    }
+
+/*JAVASCRIPT STARTS on mobile media*/
+/* Show hamburger on mobile */  
     .hamburger {
         display: flex;
     }
@@ -127,7 +150,7 @@ ul {
     #navMenu a {
         display: block;
         width: 100%;
-        padding: 10px 0;      /* increases clickable area and space between words */
+        padding: 10px 0px;      /* increases clickable area and space between words */
         color: #000000;
         text-decoration: none;
         letter-spacing: 1.5px; /* optional: more space between letters/words */
@@ -145,7 +168,7 @@ ul {
         background-color: #3B60E4;
         padding: 12px 0;
         margin-top: 8px;
-        border-top: 10px solid rgb(0, 0, 0);
+        border-top: 3px solid rgb(0, 0, 0);
         width: 100%;
     }
 
@@ -211,6 +234,12 @@ ul {
     .aboutbg:hover {
         color: #F4C20D;
     }
+
+    img, .homeimage {
+       width: 50%;
+    }
+
+
 
     /*JAVASCRIPT STARTS*/
     /* Desktop dropdown menu */
