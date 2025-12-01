@@ -58,6 +58,12 @@ ul {
 }
 
 
+.aboutbio {
+    color:#868686;
+    font-size: 20px;
+    margin: 10px;
+}
+
 footer {
     color:rgb(86, 86, 86);
     border-top: 1px solid rgb(86, 86, 86);
@@ -238,7 +244,32 @@ footer {
     img, .homeimage {
        width: 50%;
     }
+/*about JAVASCRIPT STARTS*/
+    .about-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin: 40px 0;
+    }
 
+    .aboutimage {
+        flex: 0 0 55%;
+    }
+
+     .aboutimage img{
+        width: 100%;
+    }
+
+    .aboutbio {
+        flex: 1;
+        text-align: left;
+    }
+
+    .aboutbio p {
+        margin: 0;
+        line-height: 1.6;
+    }
+/*about JAVASCRIPT ENDS*/
 
 
     /*JAVASCRIPT STARTS*/
