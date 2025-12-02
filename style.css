@@ -48,15 +48,16 @@ ul {
     background-color: #3B60E4;
 }
 
-.aboutbg {
-    background-color: #F4C20D;
-}
+
 
 
 .homeimage {
     max-width: 100%;
 }
 
+.aboutbg {
+    background-color: #F4C20D;
+}
 
 .aboutbio {
     color:#868686;
@@ -64,12 +65,52 @@ ul {
     margin: 10px;
 }
 
+
+
+
+.contactbio {
+    color: #868686;
+    font-size: 20px;
+    text-align: center;
+}
+
+.contactbio a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact-stuff {
+    color: white;
+    font-size: 20px;
+}
+
+.contact-stuff a {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    margin: 15px 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px; /* this makes the edges rounded! :D */
+}
+
+
+
+
+
 footer {
     color:rgb(86, 86, 86);
     border-top: 1px solid rgb(86, 86, 86);
     text-align: center;
     padding: 5px 0px;
 }
+
+
+
+
+
+
+
 
 
 /*JAVASCRIPT STARTS*/
@@ -111,7 +152,7 @@ footer {
 
 
 
-
+/*MOBILE RESPONSIVE DESIGN*/
 @media (max-width: 768px) {
     .logo{
         font-size: 30px;
@@ -200,7 +241,7 @@ footer {
 
 
 
-/* Desktop Responsive Design*/
+/* DESKTOP RESPONSIVE DESIGN*/
 @media only screen and (min-width: 768px) {
     
     .logo {
@@ -272,8 +313,8 @@ footer {
 /*about JAVASCRIPT ENDS*/
 
 
-    /*JAVASCRIPT STARTS*/
-    /* Desktop dropdown menu */
+/*JAVASCRIPT STARTS*/
+/* Desktop dropdown menu */
     .portfolio-item .dropdown {
         display: none;
         position: absolute;
@@ -311,5 +352,5 @@ footer {
     .portfolio-item .dropdown li a:hover {
         background-color: #2a47b3;
     }
-     /*JAVASCRIPT ENDS*/
+ /*JAVASCRIPT ENDS*/
 }
