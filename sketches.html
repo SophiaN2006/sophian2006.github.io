@@ -10,6 +10,8 @@
         100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,
         500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css"/>
+
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 
@@ -43,25 +45,35 @@
                 </nav>
             </header>
         
-             <section class="about-container">
-                <dev class="aboutimage"><img src="images/aboutimg.png"></dev>
-                <section class="aboutbio">
-                    <p> Hi, I'm Sophia Navarro! An aspiring animator and illustrator based in New York State.<br>
-     
-                        <br>I currently attend Mercy University at Dobbs Ferry where I hope to receive a Bachelor’s degree in Fine Arts by 2028.<br>
+             <div class="illustration_row">
+                <div class="illustration_column">
+                    <a href="sketches/sketch1.jpeg" data-fancybox data-caption="sketch 1">
+                        <img src="sketches/sketch1.jpeg" alt="Sketch 1">
+                    </a>
 
-                        <br>Growing up in New York all my life, I remember roaming the busy streets of Manhattan with my family 
-                        and seeing all the different types of artists vending their work. From handcrafted jewelry to spray-painted 
-                        space-themed canvases, I grew to love the art of putting pen on paper. As a result, I’ve devoted much of my life to
-                        all things related to the visual arts like animation. <br>
+                    <a href="sketches/sketch4.jpeg" data-fancybox data-caption="sketch 4">
+                        <img src="sketches/sketch4.jpeg" alt="sketch4">
+                    </a>
 
-                        <br>Right now my plan is to work on my portfolio and get my foot in the door!
+                    <a href="sketches/sketch3.jpeg" data-fancybox data-caption="sketch 3">
+                        <img src="sketches/sketch3.jpeg" alt="sketch3">
+                    </a> 
+                </div>
 
-                    </p>
-                </section>
-            </section>
+                <div class="illustration_column">
+                    <a href="sketches/sketch2.jpeg" data-fancybox data-caption="sketch 2">
+                        <img src="sketches/sketch2.jpeg" alt="sketch2">
+                    </a>
 
-             <footer>
+                    <a href="sketches/sketch5.jpeg" data-fancybox data-caption="sketch 5">
+                        <img src="sketches/sketch5.jpeg" alt="sketch5">
+                    </a>
+                </div>
+            </div>
+            
+    
+
+            <footer>
                 <p>© 2025 Sophia Navarro. All rights reserved.</p>
                  <div class="footer-links">
                     <ul>
@@ -74,12 +86,18 @@
                     </ul>
                 </div>
             </footer>
-            
+
         </div>
 
         <!--moreJS-->
         <script src="script.js"></script>
         <!--moreJS-->
 
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
+        <script>
+        Fancybox.bind('[data-fancybox]', {on: {reveal: (fancybox, slide) =>
+        {console.log('Image revealed');}}});
+        </script>
+        
     </body>
 </html>

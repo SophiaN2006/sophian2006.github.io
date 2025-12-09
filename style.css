@@ -1,7 +1,7 @@
+/* BASE STYLES (Mobile First) */
 body {
     text-align: center;
     background-color: black;
-
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -16,17 +16,21 @@ img {
     width: 100%;
 }
 
+ul {
+    list-style-type: none;
+}
+
 nav a {
     color: rgb(86, 86, 86);
     text-decoration: none;
     text-transform: uppercase;
 }
 
-ul {
+nav ul {
     list-style-type: none;
     margin: 50px;
+    padding: 0px;
     background-color: black;
-
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -48,9 +52,6 @@ ul {
     background-color: #3B60E4;
 }
 
-
-
-
 .homeimage {
     max-width: 100%;
 }
@@ -64,9 +65,6 @@ ul {
     font-size: 20px;
     margin: 10px;
 }
-
-
-
 
 .contactbio {
     color: #868686;
@@ -85,18 +83,15 @@ ul {
 }
 
 .contact-stuff a {
+    list-style-type: none;
     text-decoration: none;
     background-color: white;
     color: black;
     margin: 15px 15px;
     padding: 10px 20px;
     border: none;
-    border-radius: 8px; /* this makes the edges rounded! :D */
+    border-radius: 8px;
 }
-
-
-
-
 
 footer {
     color:rgb(86, 86, 86);
@@ -106,14 +101,6 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-/*JAVASCRIPT STARTS*/
 
 /* Hamburger Button */
 .hamburger {
@@ -147,19 +134,46 @@ footer {
 .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -7px);
 }
-/*JAVASCRIPT ENDS*/
 
+/*---------------------------------------*/
 
-
-
-/*MOBILE RESPONSIVE DESIGN*/
-@media (max-width: 768px) {
-    .logo{
+/* MOBILE: 0px to 576px */
+@media (max-width: 576px) {
+    .logo {
         font-size: 30px;
     }
 
-/*JAVASCRIPT STARTS on mobile media*/
-/* Show hamburger on mobile */  
+    .contactbio {
+        color: #868686;
+        font-size: 20px;
+        text-align: left;
+        margin: 40px;
+        padding: 0px 20px 0px 20px;
+    }
+
+    .contact-stuff {
+        text-align: left;
+        margin: 40px;
+        padding: 0px 20px 0px 20px;
+        color: white;
+        font-size: 20px;
+        background-color: #000000;
+    }
+
+    .contact-stuff li {
+        margin: 50px;
+    }
+
+    .contact-stuff a {
+        text-decoration: none;
+        background-color: white;
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+    }
+
+    /* Hamburger Menu */
     .hamburger {
         display: flex;
     }
@@ -178,29 +192,27 @@ footer {
 
     #navMenu.active {
         display: flex;
-        gap: 12px;            /* space between items (vertical gap) */
+        gap: 12px;
         align-items: center;
         justify-content: center;
     }
 
-    /* make the UL a vertical flex container and add spacing */
     #navMenu ul {
         display: flex;
         flex-direction: column;
-        gap: 16px;            /* extra spacing between list items */
+        gap: 16px;
         padding: 0;
         margin: 0;
         width: 100%;
     }
 
-    /* make each link full-width and add internal spacing and letter spacing */
     #navMenu a {
         display: block;
         width: 100%;
-        padding: 10px 0px;      /* increases clickable area and space between words */
+        padding: 10px 0px;
         color: #000000;
         text-decoration: none;
-        letter-spacing: 1.5px; /* optional: more space between letters/words */
+        letter-spacing: 1.5px;
         text-transform: uppercase;
     }
 
@@ -208,46 +220,81 @@ footer {
         position: relative;
     }
 
-    .dropdown {
-        display: none;
+    /* Mobile Dropdown */
+    .portfolio-item .dropdown {
+        display: none !important;
+        position: static !important;
         flex-direction: column;
         gap: 8px;
-        background-color: #3B60E4;
-        padding: 12px 0;
-        margin-top: 8px;
-        border-top: 3px solid rgb(0, 0, 0);
-        width: 100%;
+        background-color: #3B60E4 !important;
+        padding: 12px 0 !important;
+        margin-top: 8px !important;
+        border-top: 3px solid rgb(0, 0, 0) !important;
+        width: 100% !important;
     }
 
-    .dropdown.active {
+    .portfolio-item .dropdown.active {
         display: flex !important;
     }
 
-    .dropdown li {
+    .portfolio-item .dropdown li {
+        display: list-item !important;
         list-style: none;
     }
 
-    .dropdown li a {
+    .portfolio-item .dropdown li a {
         display: block;
-        padding: 10px 0;
-        color: #ffffff;
+        padding: 10px 0 !important;
+        color: #ffffff !important;
         font-size: 14px;
         letter-spacing: 1px;
         text-decoration: none;
+        background-color: transparent !important;
     }
-    /*JAVASCRIPT ENDS on mobile media*/
+
+    /* Illustration Section - Mobile */
+    .illustration_row {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .illustration_column {
+        width: 100%;
+    }
+
+    .illustration_column img {
+        width: 100%;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    /* Footer Social Links - Mobile */
+    .footer-links ul {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        list-style: none;
+        margin: 10px 0 0 0;
+        padding: 0;
+    }
+
+    .footer-links li {
+        list-style: none;
+    }
+
+    .footer-links img {
+        width: 20px;
+        height: 20px;
+        display: block;
+    }
 }
 
+/*---------------------------------------*/
 
-
-
-/* DESKTOP RESPONSIVE DESIGN*/
-@media only screen and (min-width: 768px) {
-    
-    .logo {
-        font-size: 60px;
-    }
-    
+/* TABLET & DESKTOP: 577px and up */
+@media (min-width: 577px) {
     nav a {
         font-size: 20px;
         padding: 50px;
@@ -255,7 +302,7 @@ footer {
 
     li {
         display: inline;
-        position: relative; /*Copilot added this*/
+        position: relative;
     }
 
     .homebg {
@@ -283,9 +330,10 @@ footer {
     }
 
     img, .homeimage {
-       width: 50%;
+        width: 50%;
     }
-/*about JAVASCRIPT STARTS*/
+
+    /* About Section */
     .about-container {
         display: flex;
         align-items: flex-start;
@@ -297,7 +345,7 @@ footer {
         flex: 0 0 55%;
     }
 
-     .aboutimage img{
+    .aboutimage img {
         width: 100%;
     }
 
@@ -310,11 +358,8 @@ footer {
         margin: 0;
         line-height: 1.6;
     }
-/*about JAVASCRIPT ENDS*/
 
-
-/*JAVASCRIPT STARTS*/
-/* Desktop dropdown menu */
+    /* Desktop Dropdown */
     .portfolio-item .dropdown {
         display: none;
         position: absolute;
@@ -352,5 +397,55 @@ footer {
     .portfolio-item .dropdown li a:hover {
         background-color: #2a47b3;
     }
- /*JAVASCRIPT ENDS*/
+
+
+    /*Illustration Section*/
+    .illustration_row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 0 4px;
+    }
+
+    .illustration_column {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .illustration_column img {
+        width: 100%;
+        margin-top: 20px;
+        display: block;
+    }
+
+    /* footer Links */
+    .footer-links ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        list-style: none;
+        margin: 15px 0 0 0;
+        padding: 0;
+    }
+
+    .footer-links li {
+        list-style: none;
+    }
+
+    .footer-links a {
+        display: inline-block;
+        transition: transform 0.2s;
+    }
+
+    .fotter-links a:hover {
+        transform: scale(1.1);
+    }
+
+    .footer-links img {
+        width: 30px;
+        height: 30px;
+        display: block;
+    }
+
+    
 }
