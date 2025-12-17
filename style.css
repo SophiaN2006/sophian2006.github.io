@@ -266,8 +266,7 @@ footer {
     }
     /*------AI Ends*/
 
-    /* Illustration Section - Mobile - Basically the images in columns, 
-    AI helped with figuring out flex */
+    /* Illustration Section - Mobile - this is the images in columns */
     .illustration_row {
         display: flex;
         flex-direction: column;
@@ -288,7 +287,8 @@ footer {
 
 
     /* Footer Social Links - Mobile - was having some trouble with understanding flex,
-    so I asked AI for help */
+    so I asked AI for help (basically anything related to flex in my website,
+    I had AI help with)*/
     .footer-links ul {
         display: flex;
         justify-content: center; /*okay, so from my understanding, what this does is it 
