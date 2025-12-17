@@ -90,7 +90,7 @@ nav ul {
     margin: 15px 15px;
     padding: 10px 20px;
     border: none;
-    border-radius: 8px;
+    border-radius: 20px; /* this makes the corners rounded! :D */
 }
 
 footer {
@@ -104,15 +104,15 @@ footer {
     color: #ffffff;
     text-transform: uppercase;
     font-weight: 700;
-    letter-spacing: 2px;
+    
     margin: 14px 0;
     font-size: 24px;
-    text-align: center; /* change to left if you prefer left-aligned */
+    text-align: center; 
 }
 
 
 
-/* Hamburger Button */
+/* Hamburger Button ---- AI Starts */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -144,6 +144,7 @@ footer {
 .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -7px);
 }
+/*-----AI ends*/
 
 /*---------------------------------------*/
 
@@ -180,10 +181,10 @@ footer {
         color: black;
         padding: 10px 20px;
         border: none;
-        border-radius: 8px;
+        border-radius: 20px; 
     }
 
-    /* Hamburger Menu */
+    /* Hamburger Menu ------ AI Starts*/
     .hamburger {
         display: flex;
     }
@@ -229,8 +230,9 @@ footer {
     #navMenu ul li {
         position: relative;
     }
+    /* ----- AI Ends*/
 
-    /* Mobile Dropdown */
+    /* Mobile Dropdown ------ AI Starts*/
     .portfolio-item .dropdown {
         display: none !important;
         position: static !important;
@@ -262,8 +264,10 @@ footer {
         text-decoration: none;
         background-color: transparent !important;
     }
+    /*------AI Ends*/
 
-    /* Illustration Section - Mobile */
+    /* Illustration Section - Mobile - Basically the images in columns, 
+    AI helped with figuring out flex */
     .illustration_row {
         display: flex;
         flex-direction: column;
@@ -280,15 +284,20 @@ footer {
         margin-bottom: 20px;
         display: block;
     }
+    
 
-    /* Footer Social Links - Mobile */
+
+    /* Footer Social Links - Mobile - was having some trouble with understanding flex,
+    so I asked AI for help */
     .footer-links ul {
         display: flex;
-        justify-content: center;
-        gap: 15px;
+        justify-content: center; /*okay, so from my understanding, what this does is it 
+        tells the browser how to distribute the space between and around the content items 
+        along the main flex box*/ 
+        gap: 12px; /*and this is space in between the two social icon imgs*/
         list-style: none;
-        margin: 10px 0 0 0;
-        padding: 0;
+        margin: 10px 0px 0px 0px;
+        padding: 0px;
     }
 
     .footer-links li {
@@ -298,7 +307,9 @@ footer {
     .footer-links img {
         width: 20px;
         height: 20px;
-        display: block;
+        display: block; /* and for this I read some stuff on w3schools.com 
+        and from what I learned theres usually two main ways an HTML element 
+        is treated: inline or block. And a block-level element takes up the full width available*/
     }
 }
 
@@ -313,7 +324,9 @@ footer {
 
     li {
         display: inline;
-        position: relative;
+        position: relative; /*okay so from what I'm understanding,
+        this makes it so you can move an element a little bit, without
+        it affecting other elements*/
     }
 
     .homebg, .portbg, .aboutbg { background-color: black; }
@@ -341,7 +354,7 @@ footer {
     .aboutbio { flex: 1; text-align: left; }
     .aboutbio p { margin: 0; line-height: 1.6; }
 
-    /* Desktop-style dropdown but tuned for tablet */
+    /* Desktop-style dropdown --- AI starts*/
     .portfolio-item .dropdown {
         display: none;
         position: absolute;
@@ -360,19 +373,48 @@ footer {
     .portfolio-item .dropdown li a {
         display: block; padding: 10px 16px; color: #ffffff; font-size: 13px;
     }
+    /*---AI ends*/
 
-    /* Illustration Section: two columns on tablet */
+
+    /* Illustration Section: two columns, accidentally named
+    it just for illustration, but its actually on each portfolio page
+    ---- AI trouble shooting starts*/
     .illustration_row {
         display: flex;
         flex-wrap: wrap;
         gap: 12px;
         padding: 0 8px;
     }
-    .illustration_column { flex: 1; min-width: 0; }
-    .illustration_column img { width: 100%; margin-top: 12px; display: block; }
+    .illustration_column { 
+        flex: 1; 
+        min-width: 0; 
+    }
+    .illustration_column img { 
+        width: 100%; 
+        margin-top: 12px; 
+        display: block; 
+    }
+     /*---- AI trouble shooting ends*/
 
-    /* Footer icons mid-size */
-    .footer-links img { width: 26px; height: 26px; display: block; }
+
+    .footer-links ul {
+        display: flex;
+        justify-content: center; 
+        gap: 12px; 
+        list-style: none;
+        margin: 10px 0px 0px 0px;
+        padding: 0px;
+    }
+
+    .footer-links li {
+        list-style: none;
+    }
+
+    .footer-links img { 
+        width: 26px; 
+        height: 26px; 
+        display: block; }
+   
 }
 
 /* DESKTOP: 993px and up */
@@ -384,22 +426,36 @@ footer {
 
     li {
         display: inline;
-        position: relative;
+        position: relative; 
     }
 
-    .homebg { background-color: black; }
-    .portbg { background-color: black; }
-    .aboutbg { background-color: black; }
+    .homebg { 
+        background-color: black; 
+    }
+    .portbg { 
+        background-color: black; 
+    }
+    .aboutbg { 
+        background-color: black; 
+    }
 
-    .homebg:hover { color: #D72638; }
-    .portbg:hover { color: #3B60E4; }
-    .aboutbg:hover { color: #F4C20D; }
+    
+    .homebg:hover { 
+        color: #D72638; 
+    }
+    .portbg:hover { 
+        color: #3B60E4; 
+    }
+    .aboutbg:hover { 
+        color: #F4C20D; 
+    }
+
 
     img, .homeimage {
         width: 50%;
     }
 
-    /* About Section */
+    /* About Section ----- AI Starts (helped with flex) */
     .about-container {
         display: flex;
         align-items: flex-start;
@@ -407,27 +463,39 @@ footer {
         margin: 40px 0;
     }
 
-    .aboutimage { flex: 0 0 55%; }
-    .aboutimage img { width: 100%; }
+    .aboutimage { 
+        flex: 0 0 55%; 
+    }
+    .aboutimage img { 
+        width: 100%; 
+    }
 
-    .aboutbio { flex: 1; text-align: left; }
-    .aboutbio p { margin: 0; line-height: 1.6; }
+    .aboutbio { 
+        flex: 1; 
+        text-align: left; 
+    }
 
-    /* Portfolio item - shrink and remove padding */
+    .aboutbio p { 
+        margin: 0; 
+        line-height: 1.6; 
+    }
+
     .portfolio-item {
         display: inline-block;
         position: relative;
     }
 
     .portfolio-item > a {
-        padding: 50px;  /* keep nav link padding */
+        padding: 50px;  
     }
+    /*-----AI ends*/ 
 
-    /* Desktop Dropdown */
+
+    /* Desktop Dropdown ----AI Starts*/
     .portfolio-item .dropdown {
         display: none;
         position: absolute;
-        top: calc(100% - 40px);  /* reduce gap by moving up into the padding */
+        top: calc(100% - 40px);  
         left: 50%;
         transform: translateX(-50%);
         background-color: #3B60E4;
@@ -449,6 +517,8 @@ footer {
         text-transform: uppercase;
     }
     .portfolio-item .dropdown li a:hover { background-color: #2a47b3; }
+    /*----AI Ends*/
+
 
     /* Illustration Section - two column desktop */
     .illustration_row {
@@ -457,8 +527,15 @@ footer {
         gap: 16px;
         padding: 0 4px;
     }
-    .illustration_column { flex: 1; min-width: 0; }
-    .illustration_column img { width: 100%; margin-top: 20px; display: block; }
+    .illustration_column { 
+        flex: 1; 
+        min-width: 0; 
+    }
+    .illustration_column img { 
+        width: 100%; 
+        margin-top: 20px; 
+        display: block; 
+    }
 
     /* footer Links */
     .footer-links ul {
@@ -469,5 +546,9 @@ footer {
         margin: 15px 0 0 0;
         padding: 0;
     }
-    .footer-links img { width: 30px; height: 30px; display: block; }
+    .footer-links img { 
+        width: 30px; 
+        height: 30px; 
+        display: block; 
+    }
 }
