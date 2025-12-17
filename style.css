@@ -100,6 +100,16 @@ footer {
     padding: 5px 0px;
 }
 
+.page-title {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 14px 0;
+    font-size: 24px;
+    text-align: center; /* change to left if you prefer left-aligned */
+}
+
 
 
 /* Hamburger Button */
@@ -235,6 +245,7 @@ footer {
 
     .portfolio-item .dropdown.active {
         display: flex !important;
+        flex-direction: column;
     }
 
     .portfolio-item .dropdown li {
@@ -293,8 +304,79 @@ footer {
 
 /*---------------------------------------*/
 
-/* TABLET & DESKTOP: 577px and up */
-@media (min-width: 577px) {
+/* TABLET: 577px — 992px */
+@media (min-width: 577px) and (max-width: 992px) {
+    nav a {
+        font-size: 18px;
+        padding: 30px;
+    }
+
+    li {
+        display: inline;
+        position: relative;
+    }
+
+    .homebg, .portbg, .aboutbg { background-color: black; }
+
+    .homebg:hover { color: #D72638; }
+    .portbg:hover { color: #3B60E4; }
+    .aboutbg:hover { color: #F4C20D; }
+
+    /* images smaller than desktop but larger than mobile */
+    img, .homeimage {
+        width: 60%;
+    }
+
+    /* About Section */
+    .about-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        margin: 30px 0;
+    }
+
+    .aboutimage { flex: 0 0 55%; }
+    .aboutimage img { width: 100%; }
+
+    .aboutbio { flex: 1; text-align: left; }
+    .aboutbio p { margin: 0; line-height: 1.6; }
+
+    /* Desktop-style dropdown but tuned for tablet */
+    .portfolio-item .dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #3B60E4;
+        flex-direction: column;
+        padding: 8px 0;
+        width: 200px;
+        z-index: 1000;
+    }
+
+    .portfolio-item .dropdown.active { display: flex !important; }
+
+    .portfolio-item .dropdown li { display: block; list-style: none; }
+    .portfolio-item .dropdown li a {
+        display: block; padding: 10px 16px; color: #ffffff; font-size: 13px;
+    }
+
+    /* Illustration Section: two columns on tablet */
+    .illustration_row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 0 8px;
+    }
+    .illustration_column { flex: 1; min-width: 0; }
+    .illustration_column img { width: 100%; margin-top: 12px; display: block; }
+
+    /* Footer icons mid-size */
+    .footer-links img { width: 26px; height: 26px; display: block; }
+}
+
+/* DESKTOP: 993px and up */
+@media (min-width: 993px) {
     nav a {
         font-size: 20px;
         padding: 50px;
@@ -305,29 +387,13 @@ footer {
         position: relative;
     }
 
-    .homebg {
-        background-color: black;
-    }
+    .homebg { background-color: black; }
+    .portbg { background-color: black; }
+    .aboutbg { background-color: black; }
 
-    .portbg {
-        background-color: black;
-    }
-
-    .aboutbg {
-        background-color: black;
-    }
-
-    .homebg:hover {
-        color: #D72638;
-    }
-
-    .portbg:hover {
-        color: #3B60E4;
-    }
-
-    .aboutbg:hover {
-        color: #F4C20D;
-    }
+    .homebg:hover { color: #D72638; }
+    .portbg:hover { color: #3B60E4; }
+    .aboutbg:hover { color: #F4C20D; }
 
     img, .homeimage {
         width: 50%;
@@ -341,49 +407,38 @@ footer {
         margin: 40px 0;
     }
 
-    .aboutimage {
-        flex: 0 0 55%;
+    .aboutimage { flex: 0 0 55%; }
+    .aboutimage img { width: 100%; }
+
+    .aboutbio { flex: 1; text-align: left; }
+    .aboutbio p { margin: 0; line-height: 1.6; }
+
+    /* Portfolio item - shrink and remove padding */
+    .portfolio-item {
+        display: inline-block;
+        position: relative;
     }
 
-    .aboutimage img {
-        width: 100%;
-    }
-
-    .aboutbio {
-        flex: 1;
-        text-align: left;
-    }
-
-    .aboutbio p {
-        margin: 0;
-        line-height: 1.6;
+    .portfolio-item > a {
+        padding: 50px;  /* keep nav link padding */
     }
 
     /* Desktop Dropdown */
     .portfolio-item .dropdown {
         display: none;
         position: absolute;
-        top: 100%;
-        left: 0;
+        top: calc(100% - 40px);  /* reduce gap by moving up into the padding */
+        left: 50%;
+        transform: translateX(-50%);
         background-color: #3B60E4;
         flex-direction: column;
         gap: 0;
         padding: 10px 0;
-        margin-top: 0;
-        border-top: none;
         width: 200px;
         z-index: 1000;
     }
-
-    .portfolio-item .dropdown.active {
-        display: flex !important;
-    }
-
-    .portfolio-item .dropdown li {
-        display: block;
-        list-style: none;
-    }
-
+    .portfolio-item .dropdown.active { display: flex !important; }
+    .portfolio-item .dropdown li { display: block; list-style: none; }
     .portfolio-item .dropdown li a {
         display: block;
         padding: 12px 20px;
@@ -393,30 +448,17 @@ footer {
         text-decoration: none;
         text-transform: uppercase;
     }
+    .portfolio-item .dropdown li a:hover { background-color: #2a47b3; }
 
-    .portfolio-item .dropdown li a:hover {
-        background-color: #2a47b3;
-    }
-
-
-    /*Illustration Section*/
+    /* Illustration Section - two column desktop */
     .illustration_row {
         display: flex;
         flex-wrap: wrap;
         gap: 16px;
         padding: 0 4px;
     }
-
-    .illustration_column {
-        flex: 1;
-        min-width: 0;
-    }
-
-    .illustration_column img {
-        width: 100%;
-        margin-top: 20px;
-        display: block;
-    }
+    .illustration_column { flex: 1; min-width: 0; }
+    .illustration_column img { width: 100%; margin-top: 20px; display: block; }
 
     /* footer Links */
     .footer-links ul {
@@ -427,25 +469,5 @@ footer {
         margin: 15px 0 0 0;
         padding: 0;
     }
-
-    .footer-links li {
-        list-style: none;
-    }
-
-    .footer-links a {
-        display: inline-block;
-        transition: transform 0.2s;
-    }
-
-    .fotter-links a:hover {
-        transform: scale(1.1);
-    }
-
-    .footer-links img {
-        width: 30px;
-        height: 30px;
-        display: block;
-    }
-
-    
+    .footer-links img { width: 30px; height: 30px; display: block; }
 }
